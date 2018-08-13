@@ -1,0 +1,33 @@
+			<section class="section--companies">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<h2>Who We Work With</h2>
+							<h3>
+								We're affiliated with over 40 organisations all with a common interest in technology, and we’re proud to be associated with such a broad range of organisations as a result of our diverse membership.
+								We recognise that technology is now integral to many organisations and so we’re embracing this through continually working with engineering, digital and development teams irrespective of industry, size or structure.
+							</h3>
+						</div>
+					</div>
+
+					<div class="row text-center">
+						{% for company in site.data.companies %}
+						<div class="col-sm-3">
+							<div class="company">
+								<a href="#">
+									<img src="/assets/images/logos/company/{{ company.name | slugify }}.svg" alt="{{ company.name }}" class="img-responsive">
+								</a>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+
+					{% if page.name != "about.html" %}
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 text-center">
+							<a href="{% link about.html %}" class="btn btn-xl">Get involved</a>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</section>

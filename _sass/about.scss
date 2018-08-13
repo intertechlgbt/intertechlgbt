@@ -1,0 +1,243 @@
+
+.page__header--about {
+	text-align: center;
+
+	.statistics {
+		width: 80%;
+		margin: 10vh 0 0;
+		font-size: 26px;
+		line-height: 30px;
+		display: inline-block;
+		border: 5px solid rgba(255, 255, 255, 0.5);
+		list-style: none;
+		@include border-radius(30px);
+		padding: 0;
+		overflow: hidden;
+
+		li {
+			float: left;
+			width: 25%;
+			background: rgba(255, 255, 255, 0.08);
+			padding: 40px 0;
+			color: #fff;
+
+		 	strong {
+		 		display: block;
+		 		font-size: 38px;
+		 		line-height: 60px;
+		 	}
+
+		 	& + li {
+				border-left: 5px solid rgba(255, 255, 255, 0.5);
+		 	}
+		}
+	}
+}
+
+.section--about {
+
+	.timeline {
+		position: relative;
+		padding: 0;
+		list-style: none;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 40px;
+			width: 2px;
+			margin-left: -1.5px;
+			background-color: #f1f1f1;
+		}
+
+		> li {
+			position: relative;
+			margin-bottom: 50px;
+			min-height: 50px;
+		}
+
+		> li:before,
+		> li:after {
+			content: " ";
+			display: table;
+		}
+
+		> li:after {
+			clear: both;
+		}
+
+		> li .timeline-panel {
+			float: right;
+			position: relative;
+			width: 100%;
+			padding: 0 20px 0 100px;
+			text-align: left;
+		}
+
+		> li .timeline-panel:before {
+			right: auto;
+			left: -15px;
+			border-right-width: 15px;
+			border-left-width: 0;
+		}
+
+		> li .timeline-panel:after {
+			right: auto;
+			left: -14px;
+			border-right-width: 14px;
+			border-left-width: 0;
+		}
+
+		> li .timeline-image {
+			z-index: 100;
+			position: absolute;
+			left: 0;
+			width: 80px;
+			height: 80px;
+			margin-left: 0;
+			border: 7px solid #f1f1f1;
+			@include border-radius(100%);
+			text-align: center;
+			color: #fff;
+			background-color: $colour-primary;
+
+			img {
+				@include border-radius(100%);
+			}
+		}
+
+		> li .timeline-image h4 {
+			margin-top: 12px;
+			font-size: 10px;
+			line-height: 14px;
+		}
+
+		> li.timeline-inverted > .timeline-panel {
+			float: right;
+			padding: 0 20px 0 100px;
+			text-align: left;
+		}
+
+		> li.timeline-inverted > .timeline-panel:before {
+			right: auto;
+			left: -15px;
+			border-right-width: 15px;
+			border-left-width: 0;
+		}
+
+		> li.timeline-inverted > .timeline-panel:after {
+			right: auto;
+			left: -14px;
+			border-right-width: 14px;
+			border-left-width: 0;
+		}
+
+		> li:last-child {
+			margin-bottom: 0;
+		}
+
+		.timeline-heading h4 {
+			margin-top: 0;
+			color: inherit;
+		}
+
+		.timeline-heading h4.subheading {
+			text-transform: none;
+		}
+
+		.timeline-body > p,
+		.timeline-body > ul {
+			margin-bottom: 0;
+		}
+	}
+
+
+	@media(min-width:768px) {
+		.timeline:before {
+			left: 50%;
+		}
+
+		.timeline > li {
+			margin-bottom: 100px;
+			min-height: 100px;
+		}
+
+		.timeline > li .timeline-panel {
+			float: left;
+			width: 41%;
+			padding: 0 20px 20px 30px;
+			text-align: right;
+		}
+
+		.timeline > li .timeline-image {
+			left: 50%;
+			width: 100px;
+			height: 100px;
+			margin-left: -50px;
+		}
+
+		.timeline > li .timeline-image h4 {
+			margin-top: 16px;
+			font-size: 13px;
+			line-height: 18px;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel {
+			float: right;
+			padding: 0 30px 20px 20px;
+			text-align: left;
+		}
+	}
+
+	@media(min-width:992px) {
+		.timeline > li {
+			min-height: 150px;
+		}
+
+		.timeline > li .timeline-panel {
+			padding: 0 20px 20px;
+		}
+
+		.timeline > li .timeline-image {
+			width: 150px;
+			height: 150px;
+			margin-left: -75px;
+		}
+
+		.timeline > li .timeline-image h4 {
+			margin-top: 30px;
+			font-size: 18px;
+			line-height: 26px;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel {
+			padding: 0 20px 20px;
+		}
+	}
+
+	@media(min-width:1200px) {
+		.timeline > li {
+			min-height: 170px;
+		}
+
+		.timeline > li .timeline-panel {
+			padding: 0 20px 20px 100px;
+		}
+
+		.timeline > li .timeline-image {
+			width: 170px;
+			height: 170px;
+			margin-left: -85px;
+		}
+
+		.timeline > li .timeline-image h4 {
+			margin-top: 40px;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel {
+			padding: 0 100px 20px 20px;
+		}
+	}
+}

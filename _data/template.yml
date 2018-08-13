@@ -1,0 +1,9 @@
+color:
+  primary: 2d2761
+  secondary: db0a5b
+  secondary-dark: 333
+  muted: 777
+font:
+  body: 'bariol, "Helvetica Neue", Helvetica, Arial, sans-serif'
+  primary: 'bariol, "Helvetica Neue", Helvetica, Arial, sans-serif'
+  secondary: 'bariol, "Helvetica Neue", Helvetica, Arial, sans-serif'

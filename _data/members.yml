@@ -1,0 +1,22 @@
+photos:
+  - image: deliveroo/1.jpg
+    description: Description of event
+    event: 2018-05-22-deliveroo.md
+  - image: deliveroo/2.jpg
+    description: Description of event
+    event: 2018-05-22-deliveroo.md
+  - image: starling/1.jpg
+    description: Description of event
+    event: 2018-03-05-starling-bank-a-celebration-of-iwd-and-diversity-in-technology-finance.md
+  - image: starling/2.jpg
+    description: Description of event
+    event: 2018-03-05-starling-bank-a-celebration-of-iwd-and-diversity-in-technology-finance.md
+  - image: deliveroo/3.jpg
+    description: Description of event
+    event: 2018-05-22-deliveroo.md
+  - image: deliveroo/4.jpg
+    description: Description of event
+    event: 2018-05-22-deliveroo.md
+  - image: starling/3.jpg
+    description: Description of event
+    event: 2018-03-05-starling-bank-a-celebration-of-iwd-and-diversity-in-technology-finance.md

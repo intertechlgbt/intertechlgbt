@@ -1,0 +1,44 @@
+
+.page__header--pride-2018 {
+	.video {
+		width: 70%;
+		height: 50vh;
+		margin: 5vh auto 0;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.section--pride-2018 {
+	background-color: #eaeaea;  
+	background-image: repeating-linear-gradient(to right,
+		#e70000 0px, #e70000 50px,
+		#ff8c00 50px, #ff8c00 100px,
+		#ffef00 100px, #ffef00 150px,
+		#00811f 150px, #00811f 200px,
+		#0044ff 200px, #0044ff 250px,
+		#760089 250px, #760089 300px),
+	repeating-linear-gradient(to right,
+		#e70000 0px, #e70000 50px,
+		#ff8c00 50px, #ff8c00 100px,
+		#ffef00 100px, #ffef00 150px,
+		#00811f 150px, #00811f 200px,
+		#0044ff 200px, #0044ff 250px,
+		#760089 250px, #760089 300px);
+	background-size: 100% 12px, 100% 12px;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+
+	.container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.image {
+		margin: 0 0 30px;
+	}
+
+}

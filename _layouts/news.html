@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include header.html %}
+
+			<div class="page__header page__header--news-item">
+				<div class="container">
+					<h2>{{ page.title }}</h2>
+
+					<div class="main-image"><img src="/assets/images/news/{{ page.image }}" alt="{{ page.title }}"></div>
+				</div>
+			</div>
+
+			<section class="section--news-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							{{ content }}
+						</div>
+						<div class="col-md-5 col-md-offset-1">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="hr"></div>
+
+{% include news.html limit="4" %}
+{% include contact.html %}
+{% include footer.html %}
+</html>

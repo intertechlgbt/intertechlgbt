@@ -1,0 +1,106 @@
+
+.section--contact {
+	background-color: #222;
+	background-image: url(/assets/images/pages/contact/map.png);
+	background-position: center;
+	background-repeat: no-repeat;
+
+	h2 {
+		color: #fff;
+	}
+
+	h3 {
+		color: #eee;
+	}
+
+	.form-group {
+		margin-bottom: 25px;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		padding: 20px;
+		width: 100%;
+	}
+
+	.form-group input.form-control {
+		height: auto;
+	}
+
+	.form-group textarea.form-control {
+		height: 150px;
+	}
+
+	button {
+		&:hover {
+			background-color: #fff;
+			color: $colour-primary;
+		}
+	}
+
+	.form-control:focus {
+		border-color: $colour-primary;
+		@include box-shadow(none);
+	}
+
+	&::-webkit-input-placeholder {
+		text-transform: uppercase;
+		font-family: $font-primary;
+		font-weight: 700;
+		color: #bbb;
+	}
+
+	&:-moz-placeholder {
+		text-transform: uppercase;
+		font-family: $font-primary;
+		font-weight: 700;
+		color: #bbb;
+	}
+
+	&::-moz-placeholder {
+		text-transform: uppercase;
+		font-family: $font-primary;
+		font-weight: 700;
+		color: #bbb;
+	}
+
+	&:-ms-input-placeholder {
+		text-transform: uppercase;
+		font-family: $font-primary;
+		font-weight: 700;
+		color: #bbb;
+	}
+
+	.text-danger {
+		color: #e74c3c;
+	}
+
+
+	.connect {
+		color: #fff;
+		text-align: center;
+		margin: 60px 0 0;
+		padding: 40px 0;
+		background: rgba(0, 0, 0, 0.35);
+		@include border-radius(5px);
+
+		ul {
+			margin: 0;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					color: $colour-secondary;
+				}
+			}
+
+			li + li {
+				margin-left: 25px;
+			}
+		}
+	}
+}
+
+
+

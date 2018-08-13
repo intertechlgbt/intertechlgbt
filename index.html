@@ -1,0 +1,39 @@
+---
+layout: default
+title: 
+permalink: /
+---
+
+			<div class="page__header page__header--home">
+				<div class="container">
+					<div class="intro">
+						<div class="intro-lead-in">LGBT+ Diversity Forum 🏳️‍🌈</div>
+						<div class="intro-heading">The professional network for LGBT+ individuals in the UK technology sector</div>
+					</div>
+
+					<div class="signup">
+						<form onsubmit="return false;">
+							<p>Keep up to date with the latest news and events</p>
+							<p><input type="text" name="email" placeholder="e.g. c.moore@example.com"></p>
+							<button class="btn btn-xl btn-particles">Sign up to the mailing list</button>
+						</form>
+
+						<ul class="list-inline social-buttons">
+							{% for network in site.social %}
+							<li><a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }} fa-2x"></i></a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<a href="#section--objectives" class="scroll">Find out more <i class="fa fa-arrow-down"></i></a>
+			</div>
+
+{% include objectives.html %}
+{% include members.html %}
+{% include events.html limit="6" %}
+{% include pride-2018.html %}
+{% include news.html limit="4" %}
+{% include team.html %}
+{% include companies.html %}
+{% include contact.html %}

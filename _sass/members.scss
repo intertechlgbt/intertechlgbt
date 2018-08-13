@@ -1,0 +1,67 @@
+
+.section--members {
+	background: linear-gradient(to left, #dadada, #fafafa);
+
+	.photos {
+		height: 340px;
+		position: relative;
+		margin-top: 30px;
+
+		.photos-runner {
+			position: absolute;
+			white-space: nowrap;
+			animation: slideshow 60s linear infinite;
+
+			&:hover {
+				-webkit-animation-play-state: paused;
+				-moz-animation-play-state: paused;
+				-o-animation-play-state: paused;
+				animation-play-state: paused;
+			}
+		}
+
+		.photo {
+			padding: 15px;
+			background: #fff;
+			display: inline-block;
+			@include box-shadow(0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+			@include border-radius(5px);
+
+			img {
+				width: 300px;
+				display: block;
+				margin: 0 0 15px;
+			}
+
+			h4 {
+				margin: 0 0 5px;
+				padding: 0;
+				width: 300px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			& + .photo {
+				margin-left: 40px;
+			}
+
+			@for $i from 1 through 100 {
+				&:nth-child(#{$i}) {
+					$angle: random() * 10 * if($i % 2 == 0, -1, 1);
+					@include transform(rotate(#{$angle}deg));
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideshow {
+	0%    { left: 0; }
+	50%   { left: -120%; }
+	100%  { left: 0; }
+}

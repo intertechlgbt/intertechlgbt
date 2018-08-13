@@ -1,0 +1,61 @@
+
+.page__header--home {
+	.intro {
+		width: 50%;
+		color: #fff;
+		float: left;
+
+		.intro-lead-in {
+			font-size: 24px;
+			margin: 10vh 0 0;
+			line-height: 30px;
+			margin-bottom: 30px;
+			font-family: $font-secondary;
+		}
+
+		.intro-heading {
+			font-size: 44px;
+			font-weight: 700;
+			line-height: 60px;
+			text-transform: uppercase;
+			font-family: $font-primary;
+		}
+	}
+
+	.signup {
+		width: 40%;
+		float: right;
+		margin: 10vh 0 0;
+		color: #fff;
+
+		form {
+			p {
+			}
+
+			input {
+				width: 100%;
+				padding: 20px;
+			}
+
+			button {
+				&:hover {
+					background-color: #fff;
+					color: $colour-primary;
+				}
+			}
+		}
+
+		.social-buttons {
+			margin-top: 30px;
+
+			a {
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width:768px) {
+}

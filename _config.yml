@@ -1,0 +1,18 @@
+url: https://www.intertechlgbt.com
+baseurl: 
+
+title: intertech LGBT Diversity Forum
+email: info@intertechlgbt.com
+description: "Promoting diversity in the technology sector"
+markdown: kramdown
+permalink: pretty
+
+social:
+  - title: twitter
+    url: http://twitter.com/intertechlgbt
+  - title: facebook
+    url: http://facebook.com/intertechlgbt
+  - title: instagram
+    url: http://instagram.com/intertechlgbt
+  - title: slack
+    url: http://slack.intertechlgbt.com

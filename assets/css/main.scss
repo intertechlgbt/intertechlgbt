@@ -1,0 +1,42 @@
+---
+---
+
+/* Only this file is parsed by jekyll */
+$colour-primary: #{{ site.data.template.color.primary }};
+$colour-secondary: #{{ site.data.template.color.secondary }};
+$colour-secondary-dark: #{{ site.data.template.color.secondary-dark }};
+$colour-muted: #{{ site.data.template.color.muted }};
+
+$font-body: {{ site.data.template.font.body }};
+$font-primary: {{ site.data.template.font.primary }};
+$font-secondary: {{ site.data.template.font.secondary }};
+
+$nav-height: 60px;
+
+
+
+@import "fonts";
+
+@import "mixins";
+@import "normalise";
+@import "basic";
+@import "buttons";
+@import "grid";
+
+@import "header";
+@import "nav";
+@import "page";
+@import "footer";
+
+@import "home";
+@import "events";
+@import "news";
+@import "team";
+@import "members";
+@import "companies";
+@import "contact";
+@import "objectives";
+@import "about";
+@import "faq";
+
+@import "pride-2018";

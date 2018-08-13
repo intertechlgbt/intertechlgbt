@@ -1,0 +1,38 @@
+---
+layout: default
+title: Events
+permalink: /events
+---
+
+			<div class="page__header page__header--events">
+				<div class="container">
+					<div class="photos">
+						{% for photo in site.data.members.photos %}
+						<div class="photo">
+							<a href="{{ post.url }}"><img src="/assets/images/photos/members/{{ photo.image }}" alt="" class="img-responsive"></a>
+						</div>
+						{% endfor %}
+
+						<h3>We've done <strong class="count-up" data-start="0" data-end="{{ site.categories.events | size }}">{{ site.posts | size }}</strong> events</h3>
+					</div>
+
+					<div class="signup">
+						<form onsubmit="return false;">
+							<p>Keep up to date with the latest news and events</p>
+							<p><input type="text" name="email" placeholder="e.g. c.moore@example.com"></p>
+							<button class="btn btn-xl btn-particles">Sign up to the mailing list</button>
+						</form>
+
+						<ul class="list-inline social-buttons">
+							{% for network in site.social %}
+							<li><a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }} fa-2x"></i></a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				<a href="#section--events" class="scroll">See all events <i class="fa fa-arrow-down"></i></a>
+			</div>
+
+{% include events.html %}
+{% include contact.html %}

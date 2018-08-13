@@ -1,0 +1,25 @@
+---
+layout: default
+title: About
+permalink: /about
+---
+
+			<div class="page__header page__header--about">
+				<div class="container">
+					<ul class="statistics">
+						<li><strong class="count-up" data-start="0" data-end="5">5</strong> years</li>
+						<li><strong class="count-up" data-start="0" data-end="3000">3,000</strong> members</li>
+						<li><strong class="count-up" data-start="0" data-end="{{ site.categories.events | size }}">{{ site.posts | size }}</strong> events</li>
+						<li><strong class="count-up" data-start="0" data-end="{{ site.data.companies | size }}">{{ site.data.companies | size }}</strong> companies</li>
+					</ul>
+				</div>
+
+				<a href="#section--about" class="scroll">Read more <i class="fa fa-arrow-down"></i></a>
+			</div>
+
+{% include about.html %}
+{% include objectives.html %}
+{% include team.html %}
+{% include companies.html %}
+{% include members.html %}
+{% include contact.html %}

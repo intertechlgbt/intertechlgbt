@@ -1,0 +1,114 @@
+
+.header__bg {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	height: 100vh;
+	position: absolute;
+	background-size: 200% 100%;
+	-webkit-animation: rainbow 60s ease infinite;
+	-z-animation: rainbow 60s ease infinite;
+	-o-animation: rainbow 60s ease infinite;
+	animation: rainbow 60s ease infinite;
+
+	background-image: linear-gradient(124deg, #93a5cf, #e4efe9, #93a5cf);
+
+	.header--index & {
+		background-image: linear-gradient(124deg, #7b4397, #dc2430, #7b4397);
+	}
+
+	.header--about & {
+		background-image: linear-gradient(124deg, #ffecd2, #fcb69f, #ffecd2);
+	}
+
+	.header--events & {
+		background-image: linear-gradient(124deg, #9face6, #74ebd5, #9face6);
+	}
+
+	.header--news & {
+		background-image: linear-gradient(124deg, #50cc7f, #f5d100, #50cc7f);
+	}
+
+	.header--faq & {
+		background-image: linear-gradient(124deg, #e8cbc0, #636fa4, #e8cbc0);
+	}
+
+	.header--pride-2018 & {
+		background-image: linear-gradient(124deg, #654ea3, #eaafc8, #654ea3);		
+	}
+
+	#particles {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+
+		canvas {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+}
+
+.page__header {
+	height: 100vh;
+	z-index: 1;
+	position: relative;
+	margin: -$nav-height - 30px 0 0;
+	padding: $nav-height + 30px + 50px 0 0;
+
+	.scroll {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		width: 200px;
+		color: #fff;
+		margin: 0 0 0 -100px;
+		line-height: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		@include border-radius(5px);
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		i {
+			margin-left: 5px;
+		}
+
+		&:hover {
+			border-color: $colour-primary;
+			color: $colour-primary;
+		}
+	}
+}
+
+
+
+@-webkit-keyframes rainbow {
+	0%{background-position:0% 0%}
+	50%{background-position:100% 0%}
+	100%{background-position:0% 0%}
+}
+
+@-moz-keyframes rainbow {
+	0%{background-position:0% 0%}
+	50%{background-position:100% 0%}
+	100%{background-position:0% 0%}
+}
+
+@-o-keyframes rainbow {
+	0%{background-position:0% 0%}
+	50%{background-position:100% 0%}
+	100%{background-position:0% 0%}
+}
+
+@keyframes rainbow { 
+	0%{background-position:0% 0%}
+	50%{background-position:100% 0%}
+	100%{background-position:0% 0%}
+}

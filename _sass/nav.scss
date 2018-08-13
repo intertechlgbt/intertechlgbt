@@ -1,0 +1,80 @@
+
+nav {
+	margin: 30px 0 0;
+	position: relative;
+	height: $nav-height;
+	position: relative;
+	z-index: 100;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		float: left;
+		height: $nav-height;
+		width: 220px;
+
+		a {
+			width: 240px;
+			display: block;
+			height: $nav-height;
+			text-indent: -9999px;
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+			background-image: url(/assets/images/logos/intertech-light.svg);
+		}
+	}
+
+	ul {
+		padding: 0;
+		float: right;
+		font-size: 1.1em;
+		list-style: none;
+		line-height: 2.4em;
+		height: $nav-height;
+		margin: ($nav-height - 40px) / 2 0 0;
+
+		li {
+			float: left;
+			margin: 0 0 0 2px;
+			position: relative;
+
+			a {
+				color: #fff;
+				display: block;
+				padding: 0 15px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-family: $font-primary;
+				@include transition(all ease .15s);
+
+				&:hover {
+					color: #fff;
+					@include transform(translateY(-1px));
+					text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+				}
+			}
+
+			&.active {
+				color: #fff;
+
+				&:after {
+					bottom: 0;
+					left: 50%;
+					width: 6px;
+					height: 6px;
+					content: '';
+					background: #fff;
+					@include border-radius(50%);
+					position: absolute;
+					margin: 0 0 0 -3px;
+				}
+
+				a {
+				}
+			}
+		}
+	}
+}

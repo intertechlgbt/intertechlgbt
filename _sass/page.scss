@@ -1,0 +1,33 @@
+
+.page {
+	z-index: 1;
+	position: relative;
+}
+
+section {
+	padding: 40px 0;
+
+	h2 {
+		margin: 0 0 15px;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin: 0 0 20px;
+		color: $colour-muted;
+		text-transform: none;
+		font-family: $font-secondary;
+		font-style: italic;
+		font-weight: 400;
+	}
+}
+
+@media(min-width:768px) {
+	section {
+		padding: 60px 0;
+
+		h3 {
+			margin-bottom: 40px;
+		}
+	}
+}

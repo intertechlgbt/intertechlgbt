@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+{% include header.html %}
+
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture startsunix %}{{post.starts | date: '%s'}}{% endcapture %}
+
+			<div class="page__header page__header--event">
+				<div class="container">
+					<h2>{{ page.title }}</h2>
+					<p class="text-muted">{{ page.starts | date: "%B %-d, %Y from %l:%M%P" }} to {{ page.ends | date: "%l:%M%P" }} at {{ page.company }}</p>
+
+					<div class="main-image"><img src="/assets/images/events/{{ page.image }}" alt="{{ page.title }}"></div>
+
+					{% if page.sold_out %}
+					<div class="register"><span class="btn btn-xl disabled">Sold out</span></div>
+					{% else if startsunix > nowunix and page.register %}
+					<div class="register"><a href="{{ page.register }}" class="btn btn-xl" target="_blank">Register to attend</a></div>
+					{% else if startsunix < nowunix and page.register %}
+					<div class="register"><span class="btn btn-xl disabled">Event has finished</span></div>
+					{% endif %}
+				</div>
+			</div>
+
+			<section class="section--event">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							{{ content }}
+							<br>
+							<p class="text-muted">
+								{{ page.starts | date: "%B %-d, %Y from %l:%M%P" }} to
+								{{ page.ends | date: "%l:%M%P" }}
+							</p>
+						</div>
+						<div class="col-md-5 col-md-offset-1">
+							{% if page.location != '' %}
+							<p class="location"><i class="fa fa-map-pin fa-lg"></i> {{ page.location }}</p>
+							<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ page.location }}&key=AIzaSyA3-tnjH-9YW9lmpA3WOqWmiWQu5Zg_bWM" allowfullscreen></iframe>
+							{% else %}
+							<p class="location"><i class="fa fa-map-pin fa-lg"></i> {{ page.company }}</p>
+							{% endif %}
+
+							<ul class="tags">
+								{% for tag in page.tags %}
+								<li><a href="/tags/#{{ tag }}" class="btn">{{ tag }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="hr"></div>
+
+{% include events.html limit="6" %}
+{% include contact.html %}
+{% include footer.html %}
+</html>
